@@ -1,0 +1,29 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  port: 5432
+  database: site_development
+  username: vladimir
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  port: 5432
+  database: site_test
+  username: vladimir
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  port: 5432
+  database: site_production
+  username: vladimir
+  password:

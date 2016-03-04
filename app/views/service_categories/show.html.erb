@@ -1,0 +1,12 @@
+<p id="notice" class="notice"><%= notice %></p>
+
+<div class="show_box">
+	<p>
+		<strong>Name:</strong>
+		<%= @service_category.name %>
+	</p>
+
+	<%= link_to 'Редактировать', edit_service_category_path(@service_category) %> |
+	<%= link_to 'Назад', service_categories_path %>
+
+</div>

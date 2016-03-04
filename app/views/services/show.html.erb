@@ -1,0 +1,22 @@
+<p id="notice" class="notice"><%= notice %></p>
+
+<div class="show_box">
+	<p>
+		<strong>Name:</strong>
+		<%= @service.name %>
+	</p>
+
+	<p>
+		<strong>Service category:</strong>
+		<%= @service.service_category_id %>
+	</p>
+
+	<p>
+		<strong>Rating:</strong>
+		<%= @service.rating %>
+	</p>
+
+	<%= link_to 'Edit', edit_service_path(@service) %> |
+	<%= link_to 'Back', services_path %>
+</div>
+

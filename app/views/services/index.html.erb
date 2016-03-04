@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="services">
+	<h1>Все услуги</h1>
+
+	<table class="table-fill">
+		<thead>
+		<tr>
+			<th class="text-left">Наименование</th>
+			<th class="text-left">Категория</th>
+			<th colspan="3"></th>
+		</tr>
+		</thead>
+
+		<tbody class="table-hover">
+		<% @services.each do |service| %>
+			<tr>
+				<td class="text-left"><%= service.name %></td>
+				<td class="text-left"><%= service.service_category.name %></td>
+				<td class="text-left"><%= link_to 'Показать подробней', service %></td>
+				<td class="text-left"><%= link_to 'Редактировать', edit_service_path(service) %></td>
+				<td class="text-left"><%= link_to 'Удалить', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+
+	<br>
+
+	<%= link_to 'Добавить услугу', new_service_path, class: 'blue_button' %>
+</div>
+

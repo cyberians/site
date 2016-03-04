@@ -1,0 +1,28 @@
+<div class="form_box">
+	<%= form_for(@service) do |f| %>
+		<% if @service.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+				<ul>
+					<% @service.errors.full_messages.each do |message| %>
+						<li><%= message %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+
+		<div class="field">
+			<%= f.label 'Наименование' %><br>
+			<%= f.text_field :name, class: 'text_box' %>
+		</div>
+		<div class="field">
+			<%= f.label 'Категория' %><br>
+			<%= f.collection_select :service_category_id, ServiceCategory.all, :id, :name, class: 'combobox' %>
+		</div>
+		<div class="actions">
+			<%= f.submit 'Создать',  class: 'blue_button' %>
+		</div>
+	<% end %>
+
+</div>
